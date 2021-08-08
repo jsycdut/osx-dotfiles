@@ -1,0 +1,137 @@
+{
+    "+auto switch": {
+        "color": "#99dd99",
+        "defaultProfileName": "direct",
+        "name": "auto switch",
+        "profileType": "SwitchProfile",
+        "rules": [
+            {
+                "condition": {
+                    "conditionType": "HostWildcardCondition",
+                    "pattern": "internal.example.com"
+                },
+                "profileName": "direct"
+            },
+            {
+                "condition": {
+                    "conditionType": "HostWildcardCondition",
+                    "pattern": "*.example.com"
+                },
+                "profileName": "proxy"
+            }
+        ]
+    },
+    "+proxy": {
+        "bypassList": [
+            {
+                "conditionType": "BypassCondition",
+                "pattern": "127.0.0.1/7"
+            },
+            {
+                "conditionType": "BypassCondition",
+                "pattern": "::1"
+            },
+            {
+                "conditionType": "BypassCondition",
+                "pattern": "localhost"
+            },
+            {
+                "conditionType": "BypassCondition",
+                "pattern": ".zhihu.com"
+            },
+            {
+                "conditionType": "BypassCondition",
+                "pattern": ".csdn.net"
+            },
+            {
+                "conditionType": "BypassCondition",
+                "pattern": ".bilibili.com"
+            },
+            {
+                "conditionType": "BypassCondition",
+                "pattern": ".leetcode-cn.com"
+            },
+            {
+                "conditionType": "BypassCondition",
+                "pattern": "*.cn"
+            },
+            {
+                "conditionType": "BypassCondition",
+                "pattern": ".ruanyifeng.com"
+            },
+            {
+                "conditionType": "BypassCondition",
+                "pattern": ".hupu.com"
+            },
+            {
+                "conditionType": "BypassCondition",
+                "pattern": ".miguvideo.com"
+            },
+            {
+                "conditionType": "BypassCondition",
+                "pattern": ".meituan.com"
+            },
+            {
+                "conditionType": "BypassCondition",
+                "pattern": ".jianshu.com"
+            },
+            {
+                "conditionType": "BypassCondition",
+                "pattern": ".oschina.net"
+            },
+            {
+                "conditionType": "BypassCondition",
+                "pattern": ".cmsblogs.com"
+            },
+            {
+                "conditionType": "BypassCondition",
+                "pattern": ".segmentfault.com"
+            },
+            {
+                "conditionType": "BypassCondition",
+                "pattern": ".processon.com"
+            },
+            {
+                "conditionType": "BypassCondition",
+                "pattern": ".qq.com"
+            },
+            {
+                "conditionType": "BypassCondition",
+                "pattern": ".ibm.com"
+            },
+            {
+                "conditionType": "BypassCondition",
+                "pattern": ".processon.com"
+            },
+            {
+                "conditionType": "BypassCondition",
+                "pattern": ".bing.com"
+            },
+            {
+                "conditionType": "BypassCondition",
+                "pattern": ".baidu.com"
+            }
+        ],
+        "color": "#99ccee",
+        "fallbackProxy": {
+            "host": "127.0.0.1",
+            "port": 9997,
+            "scheme": "socks5"
+        },
+        "name": "proxy",
+        "profileType": "FixedProfile",
+        "revision": "175c9cde4f4"
+    },
+    "-addConditionsToBottom": false,
+    "-confirmDeletion": true,
+    "-downloadInterval": 1440,
+    "-enableQuickSwitch": false,
+    "-monitorWebRequests": true,
+    "-quickSwitchProfiles": [],
+    "-refreshOnProfileChange": true,
+    "-revertProxyChanges": true,
+    "-showExternalProfile": true,
+    "-showInspectMenu": true,
+    "-startupProfileName": "",
+    "schemaVersion": 2
+}
